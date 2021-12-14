@@ -4,7 +4,9 @@ h1, h2, p, a, span {
 }
 a {
   font-size: 28px;
-  margin: 4px auto 4px 6px;
+  margin: 4px auto;
+  color: blue;
+  text-decoration: none;
 }
 h2 {
   margin: 5px;
@@ -12,32 +14,70 @@ h2 {
 }
 .maincontainer {
   margin: 30px auto auto 3%;
-  transition-duration: 1s;
 }
 .kl6container {
   overflow: hidden;
 }
 .kl6drop {
-  height: 0;
+  padding-left: 30px;
+  max-height: 0;
+  transition-duration: 1s;
 }
 .kl6container:hover .kl6drop {
-  height: auto;
+  max-height: 300px;
 }
 .kl7container {
   overflow: hidden;
 }
 .kl7drop {
-  height: 0;
+  padding-left: 30px;
+  max-height: 0;
+  transition-duration: 1s;
 }
 .kl7container:hover .kl7drop {
-  height: auto;
+  max-height: 300px;
 }
-.kl8container {
+.kl9container {
   overflow: hidden;
 }
-.kl8drop {
-  height: 0;
+.kl9drop {
+  padding-left: 30px;
+  max-height: 0;
+  transition-duration: 1s;
 }
-.kl8container:hover .kl8drop {
-  height: auto;
+.kl9container:hover .kl9drop {
+  max-height: 300px;
+}
+.kl10container {
+  overflow: hidden;
+}
+.kl10drop {
+  padding-left: 30px;
+  max-height: 0;
+  transition-duration: 1s;
+}
+.kl10container:hover .kl10drop {
+  max-height: 300px;
+}
+.kl11container {
+  overflow: hidden;
+}
+.kl11drop {
+  padding-left: 30px;
+  max-height: 0;
+  transition-duration: 1s;
+}
+.kl11container:hover .kl11drop {
+  max-height: 300px;
+}
+.kl12container {
+  overflow: hidden;
+}
+.kl12drop {
+  padding-left: 30px;
+  max-height: 0;
+  transition-duration: 1s;
+}
+.kl12container:hover .kl12drop {
+  max-height: 300px;
 }
