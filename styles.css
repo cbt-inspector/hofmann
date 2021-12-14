@@ -2,6 +2,42 @@
 h1, h2, p, a, span {
   font-family: 'Montserrat', sans-serif;
 }
+a {
+  font-size: 28px;
+  margin: 4px auto 4px 6px;
+}
+h2 {
+  margin: 5px;
+  font-size: 34px;
+}
 .maincontainer {
   margin: 30px auto auto 3%;
+  transition-duration: 1s;
+}
+.kl6container {
+  overflow: hidden;
+}
+.kl6drop {
+  height: 0;
+}
+.kl6container:hover .kl6drop {
+  height: auto;
+}
+.kl7container {
+  overflow: hidden;
+}
+.kl7drop {
+  height: 0;
+}
+.kl7container:hover .kl7drop {
+  height: auto;
+}
+.kl8container {
+  overflow: hidden;
+}
+.kl8drop {
+  height: 0;
+}
+.kl8container:hover .kl8drop {
+  height: auto;
 }
