@@ -26,10 +26,10 @@
       margin: 30px auto auto 15%;
       z-index: 1;
     }
-    .kl6container {
+    .xcontainer {
       overflow: hidden;
     }
-    .kl6drop {
+    .xdrop {
       margin-left: 25px;
       border: solid black;
       border-width: 0 0 0 2px;
@@ -38,7 +38,7 @@
       max-height: 0;
       transition-duration: 1s;
     }
-    .kl6container:hover .kl6drop {
+    .xcontainer:hover .xdrop {
       max-height: 300px;
     }
 
@@ -51,19 +51,23 @@
     <h1>hof hof mann mann</h1>
 
 
-    <div class="kl6container">
-      <h2>6. Jahrgangsstufe </h2>
-      <div class="kl6drop">
-        <a href="Klasse6/index.html">test1</a>
-        <br>
-        <a href="Klasse6/index.html">test2</a>
-        <br>
-        <a href="Klasse6/index.html">test3</a>
-        <br>
-        <a href="Klasse6/index.html">test4</a>
-      </div>
-    </div>
 
-    
+
+    {% for x in dircontents %}
+
+      <div class="xcontainer">
+        <h2>{{x}}</h2>
+        <div class="xdrop">
+          <hr>
+          <hr>
+          <a href="{{x}}">test1</a>
+          <hr>
+          <hr>
+        </div>
+      </div>
+
+    {% endfor %}
+
+
   </div>
 </body>
