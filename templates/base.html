@@ -69,11 +69,40 @@
 
     </style>
   </head>
-  <body>
+  <body onLoad="recoverDark()">
     <script>
+    var dark
+
     function darkmode() {
+
       var element = document.body;
       element.classList.toggle("dark");
+
+
+
+      if (dark != true){
+        document.cookie = "darkmode=true"
+        dark = true
+
+      } else {
+        document.cookie = "darkmode=false; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
+        dark = false
+      }
+      alert(dark)
+    }
+
+
+    function recoverDark() {
+
+
+        let cookie = document.cookie
+        if(cookie.indexOf("darkmode=true") >= 0){
+            var element = document.body;
+            element.classList.toggle("dark");
+            dark = true
+        } else {
+            dark = false
+        }
     }
     </script>
     <div class="maincontainer">
