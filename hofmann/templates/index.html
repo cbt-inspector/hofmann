@@ -1,73 +1,22 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Joachim Hofmann{% endblock %}
+{% block style %}
+<style>
 
-<head>
-
-  <meta charset="UTF-8">
-  <title>Joachim Hofmann</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    h1, h2, p, a, span {
-      font-family: 'Montserrat', sans-serif;
-    }
-    a {
-      font-size: 28px;
-      margin: 4px auto;
-      color: blue;
-      text-decoration: none;
-    }
-    h1 {
-      font-size: 42px;
-    }
-    h2 {
-      margin: 5px;
-      font-size: 34px;
-    }
-    .maincontainer {
-      margin: 30px auto auto 15%;
-      z-index: 1;
-    }
-    .xcontainer {
-      overflow: hidden;
-    }
-    .xdrop {
-      margin-left: 25px;
-      border: solid black;
-      border-width: 0 0 0 2px;
-      border-radius: 10px;
-      padding-left: 20px;
-      max-height: 0;
-      transition-duration: 1s;
-    }
-    .xcontainer:hover .xdrop {
-      max-height: 300px;
-    }
-
-  </style>
-</head>
-
-<body>
-  <img class="hof" src="hofmann.jpg" alt="hofhofhofmannmannmann">
-  <div class="maincontainer">
-    <h1>hof hof mann mann</h1>
-
-
-
-
-    {% for x in dircontents %}
-
-      <div class="xcontainer">
-        <h2>{{x}}</h2>
-        <div class="xdrop">
-          <hr>
-          <hr>
-          <a href="{{x}}">test1</a>
-          <hr>
-          <hr>
-        </div>
-      </div>
-
-    {% endfor %}
-
-
+</style>
+{% endblock %}
+{% block body %}
+{% for x in dircontents %}
+  <div class="xcontainer">
+    <h2>{{x[-1]}}</h2>
+    <div class="xdrop">
+      {% for y in x %}
+        {% if y != x[-1] %}
+          <a href="{{x[-1].replace(" ","").replace(".Jahrgangsstufe","JAHRGANGSSTUFE")}}/{{y}}">{{y}}</a>
+          <br>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
-</body>
+{% endfor %}
+{% endblock %}

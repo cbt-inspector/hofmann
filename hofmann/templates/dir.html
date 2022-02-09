@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}{{cont}}{% endblock %}
+{% block style %}
+<style>
+  .icon {
+    height: 30px;
+    margin-top: 3px;
+  }
+  span {
+    font-size: 30px;
+  }
+  a {
+    margin-bottom: 5px;
+  }
+</style>
+{% endblock %}
+{% block body %}
+  <h1>{{cont}}</h1>
+  {% for x in dircont %}
+    {% if "." in x %}
+      <img src="/static/assets/iconfile.png" alt="file" class="icon">
+      <span>
+        <a href="/{{href}}/{{x}}" target="_blank">{{x}}</a>
+      </span>
+    {% else %}
+      <img src="/static/assets/iconfolder.png" alt="folder" class="icon">
+      <span>
+        <a href="/{{href}}/{{x}}" target="">{{x}}</a>
+      </span>
+    {% endif %}
+    <br>
+  {% endfor %}
+{% endblock %}

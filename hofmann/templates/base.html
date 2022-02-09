@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block style %}{% endblock %}
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      h1, h2, p, a, span {
+        font-family: 'Montserrat', sans-serif;
+      }
+      a {
+        font-size: 28px;
+        margin: 4px auto;
+        color: blue;
+        text-decoration: none;
+      }
+      h1 {
+        font-size: 42px;
+      }
+      h2 {
+        margin: 5px;
+        font-size: 34px;
+      }
+      .maincontainer {
+        margin: 30px auto auto 15%;
+        z-index: 1;
+      }
+      .xcontainer {
+        overflow: hidden;
+      }
+      .xdrop {
+        margin-left: 25px;
+        border: solid black;
+        border-width: 0 0 0 2px;
+        border-radius: 10px;
+        padding-left: 20px;
+        max-height: 0;
+        transition-duration: 1s;
+      }
+      .xcontainer:hover .xdrop {
+        max-height: 300px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="maincontainer">
+      <a href="/">
+        <h1>Joachim hof hof mann mann (based)</h1>
+      </a>
+      {% block body %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
