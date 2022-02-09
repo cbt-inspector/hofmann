@@ -52,6 +52,7 @@ def folder(link, file) :
     href = f"{link}*{file}"
     path = f"{os.getcwd()}/static/bruh/".replace("\\", "/")
     npath = link.replace("*", "/")
+    pth = npath
     if "JAHRGANGSSTUFE" in npath:
         sus = npath.replace("JAHRGANGSSTUFE","")
         npath = f"Klasse{sus}"
@@ -66,12 +67,15 @@ def folder(link, file) :
     #    for name in dirs:
     #        #if file in root:
     #        dircont.append(name.replace("\\","/"))
+
+    if "/" not in pth:
+        pth = ""
     if "." in file:
         return send_from_directory(f"{path}{npath}", file, as_attachment= False)
     else:
         for x in os.listdir(fullpath):
             dircont.append(x)
-        return render_template("dir.html", cont= f"{npath}/{file}", dircont= dircont, href= href)
+        return render_template("dir.html", path = pth , cont= f"{npath}/{file}", dircont= dircont, href= href)
 
 
 if __name__ == "__main__":

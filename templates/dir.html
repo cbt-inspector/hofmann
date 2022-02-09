@@ -15,7 +15,20 @@
 </style>
 {% endblock %}
 {% block body %}
-  <h1>{{cont}}</h1>
+  <h1> {{cont}} </h1>
+  {% if path != ""%}
+  <span>
+    <a href="/{{path}}">
+    <img src="/static/assets/back_arrow.png" alt="file" class="icon"></a>
+  </span>
+  {% else %}
+  <span>
+    <a href="/">
+    <img src="/static/assets/back_house.png" alt="file" class="icon" href="/"></a>
+    </span>
+  {%endif%}
+  <br>
+  <br>
   {% for x in dircont %}
     {% if "." in x %}
       <img src="/static/assets/iconfile.png" alt="file" class="icon">
