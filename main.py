@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from flask import Flask , render_template, send_from_directory
+import werkzeug
 import os
 import git
 
@@ -51,7 +52,7 @@ Functions in files:
 
 Setup:
 - install all required dependencies via
-$ pip install requirements.txt
+$ pip install -r requirements.txt
 
 - This script is meant to be running on an uWSGI server, preferrably behind nginx.
     Quickstart docs: https://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html
@@ -74,7 +75,7 @@ $ pip install requirements.txt
 
 Testing the website locally:
 - install all required dependencies via
-$ pip install requirements.txt
+$ pip install -r requirements.txt
 
 - Testing after this step is easy, just run this python script and open up http://127.0.0.1:5000 in your browser.
 
@@ -127,15 +128,18 @@ def datenschutz():
 
 @app.route("/update")
 def update():
+    repo.remotes.origin.fetch()
     repo.remotes.origin.pull()
     return home()
 
 @app.route("/error")
 def error():
     return render_template("404.html")
-#@app.errorhandler("404")
-#def page_not_found(e):   # note that we set the 404 status explicitly
-#   return render_template('404.html'), 404
+
+@app.errorhandler(werkzeug.exceptions.NotFound)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404
 
 
 if __name__ == "__main__":
