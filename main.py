@@ -136,7 +136,10 @@ def update():
 @app.errorhandler(werkzeug.exceptions.NotFound)
 def page_not_found(e):
     # note that we set the 404 status explicitly
-    return render_template('404.html'), 404
+    code = "404"
+    description = "Page not found (go cry)-----"
+    #dont make that ^^^^ longer than this ----|"
+    return render_template('error.html', errcode= code, description= description), 404
 
 
 if __name__ == "__main__":
