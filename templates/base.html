@@ -119,15 +119,16 @@
       /* Popup container - can be anything you want */
         .popup {
         position: fixed;
-        top:50%;
-        left:50%;
+        top:75%;
+        left:25%;
         display: inline-block;
         }
 
         /* The actual popup */
         .popup .popuptext {
         visibility: hidden;
-        width: 160px;
+        width: 800px;/*160px;*/
+        height: 600px;
         background-color: var(--tertiary);
         color: #fff;
         text-align: center;
@@ -142,6 +143,22 @@
 
         .popup .popuptext::after {
 
+        }
+
+        .popup .popupbutton {
+            position: absolute;
+            bottom: 10px;
+            width: 100px
+        }
+
+        .popup #cookiesAccept {
+            position: absolute;
+            right: 35%;
+        }
+
+        .popup #cookiesDecline {
+            position: absolute;
+            left: 35%;
         }
 
         /* Toggle this class - hide and show the popup */
@@ -258,8 +275,8 @@
      <div class="popup">
         <span class="popuptext" id="Popup">Popup text...
         <br>
-        <button onclick="acceptCookies()">Accept</button>
-        <button onclick="togglePopup()">Decline</button>
+        <button class="popupbutton" id="cookiesAccept" onclick="acceptCookies()">Accept</button>
+        <button class="popupbutton" id="cookiesDecline" onclick="togglePopup()">Decline</button>
         </span>
     </div>
 
