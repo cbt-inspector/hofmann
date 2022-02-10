@@ -126,6 +126,10 @@ def folder(link, file) :
 def datenschutz():
     return render_template("datenschutz.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 @app.route("/update")
 def update():
     repo.remotes.origin.fetch()
