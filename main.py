@@ -132,9 +132,6 @@ def update():
     repo.remotes.origin.pull()
     return home()
 
-@app.route("/error")
-def error():
-    return render_template("404.html")
 
 @app.errorhandler(werkzeug.exceptions.NotFound)
 def page_not_found(e):
