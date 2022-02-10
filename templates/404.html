@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ERROR</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+    body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: rgb(13,13,13);
+    color: #fff;
+    font-size: 5vw;
+    font-family: 'Courier Prime', monospace;
+    letter-spacing: -7px;
+    animation: blackch 5s linear infinite;
+    }
+    @keyframes blackch {
+      from {
+        background: rgb(13,13,13);
+      }
+      20% {
+        background: rgb(10,10,10);
+      }
+      60% {
+        background: rgb(11,11,11);
+      }
+      60.5% {
+        background: rgb(70,70,70);
+      }
+      61% {
+        background: rgb(11,11,11);
+      }
+      70% {
+        background: rgb(12,12,12);
+      }
+      to {
+        background: rgb(10,10,10);
+      }
+    }
+    h2{
+    margin-top: 50px;
+    padding: 0;
+    margin-bottom: 0;
+    color: rgb(0,255,0);
+    text-shadow: 0 0 4px rgb(0,255,0);
+    animation: glitch 1s linear infinite;
+    }
+
+    @keyframes glitch{
+    2%,54%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,50%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    52%{
+      transform: translate(0,0) skew(5deg);
+    }
+    }
+
+    h2:before,
+    h2:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    }
+
+    h2:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    }
+
+    @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-19deg);
+    }
+    }
+
+    h2:after{
+    animation: glitchBotom 1.5s linear alternate infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    }
+
+    @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg);
+    }
+    }
+
+
+
+
+
+
+    h3{
+    margin-top: 50px;
+    padding: 0;
+    margin-bottom: 0;
+    color: rgb(0,255,0);
+    font-size: 7.3vw;
+    text-shadow: 0 0 4px rgb(0,255,0);
+    transition-duration: 0.2s;
+    animation: glittch 1s linear infinite;
+    }
+
+    @keyframes glittch{
+    2%,24%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,20%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    22%{
+      transform: translate(0,0) skew(5deg);
+    }
+    }
+
+    h3:before,
+    h3:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    }
+
+    h3:before{
+    animation: glittchTop 1.2s linear alternate infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    }
+
+    @keyframes glittchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg);
+    }
+    }
+
+    h3:after{
+    animation: glittchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    }
+
+    @keyframes glittchBotom{
+    2%,64%{
+      transform: translate(-3px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,1px);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg);
+    }
+    }
+    .linkback:hover h3 {
+      color: rgb(255,0,0);
+      text-shadow: 0 0 4px rgb(255,0,0);
+    }
+    .linkback {
+      cursor: pointer;
+      text-decoration: none;
+    }
+    #blink {
+      animation: blink 1.4s linear  infinite;
+    }
+    @keyframes blink {
+      0%,50% {
+        color: transparent;
+        text-shadow: 0 0 0 transparent;
+      }
+      51%,100% {
+        color: inherit;
+        text-shadow: 0 0 4px inherit;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="">
+      <script>
+      document.addEventListener('keydown', function(event) {
+        if(event.keyCode == 13) {
+          location.href = "/";
+        }
+        else if(event.keyCode == 89) {
+          location.href = "/";
+        }
+      });
+      </script>
+      <errorpage/>
+      <h2 title="> err_404_">> err_404_</h2>
+      <a class="linkback" href="/">
+        <h3 title="> back home? [Y/n]" style="padding-top:">> back home? [Y/n]</h3>
+        <h3 title=">" style="padding-top:">> <span id="blink">_</span></h3>
+      </a>
+
+    </div>
+  </body>
+</html>
