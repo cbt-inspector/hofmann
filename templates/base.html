@@ -10,7 +10,7 @@
       :root {
         --primary: #F5F5F5;
         --secondary: #000000;
-        --tertiary: #000000;
+        --tertiary: #292929;
         --quartary: #0000ff;
         --quintary: #d7d7d7;
 
@@ -90,7 +90,7 @@
         top: -80px;
     }
 
-      h1, h2, p, a, span {
+      h1, h2, p, a, span, button {
         font-family: 'Montserrat', sans-serif;
       }
       p {color: var(--tertiary)}
@@ -163,20 +163,30 @@
       /* Popup container - can be anything you want */
         .popup {
         position: fixed;
-        top:75%;
-        left:25%;
+        bottom: 10%;
+        right: 12%;
         display: inline-block;
+        }
+
+        .popup h1 {
+          font-size: 15px;
+          text-shadow: 1px 1px 2px #fff;
+          text
+        }
+        .popup button {
+          font-weight: bolder;
         }
 
         /* The actual popup */
         .popup .popuptext {
         visibility: hidden;
-        width: 800px;/*160px;*/
-        height: 600px;
+        font-size: 15px;
+        width: 300px;/*160px;*/
+        height: 80px;
         background-color: var(--tertiary);
-        color: #fff;
+        color: var(--secondary);
         text-align: center;
-        border-radius: 6px;
+        border-radius: 6px 0px 0px 6px;
         padding: 8px 0;
         position: absolute;
         z-index: 1;
@@ -191,25 +201,33 @@
 
         .popup .popupbutton {
             position: absolute;
+            background: var(--primary);
             bottom: 10px;
-            width: 100px;
-            border:2;
-            border-color:var(--primary);
+            width: 35px;
+            height: 35px;
+            border: 5px ridge;
             border-radius: 6px;
+            transition-duration: 0.5s;
         }
 
-        .popup .popupbutton :hover{
-            background-color:red;
+        .popup .popupbutton:hover{
+            background-color: var(--secondary);
         }
 
         .popup #cookiesAccept {
             position: absolute;
-            right: 35%;
+            font-size: 15px;
+            left: 5%;
+            border-color: #00ff00;
+            color: #00ff00;
         }
 
         .popup #cookiesDecline {
             position: absolute;
-            left: 35%;
+            font-size: 15px;
+            left: 21%;
+            border-color: #ff0000;
+            color: #ff0000;
         }
 
         /* Toggle this class - hide and show the popup */
@@ -221,13 +239,13 @@
 
         /* Add animation (fade in the popup) */
         @-webkit-keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
+        from {right: -15%;}
+        to {right: 12%;}
         }
 
         @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity:1 ;}
+        from {right: -15%;}
+        to {right: 12%;}
         }
 
         #footer .privacy {
@@ -356,11 +374,10 @@
     </div>
 
      <div class="popup">
-        <span class="popuptext" id="Popup"><h1>This Website needs Cookies for the Dark mode to work!</h1>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <span class="popuptext" id="Popup"><h1>A cookie 🍪 for your darkmode?</h1>
         <br>
-        <button class="popupbutton" id="cookiesAccept" onclick="acceptCookies()">Accept</button>
-        <button class="popupbutton" id="cookiesDecline" onclick="togglePopup()">Decline</button>
+        <button class="popupbutton" id="cookiesAccept" onclick="acceptCookies()">Y</button>
+        <button class="popupbutton" id="cookiesDecline" onclick="togglePopup()">N</button>
         </span>
     </div>
 
