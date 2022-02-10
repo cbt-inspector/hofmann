@@ -230,12 +230,24 @@
         to {opacity:1 ;}
         }
 
-        #footer #privacy {
-            position: absolute;
-            left:10px;
+        #footer .privacy {
+            position: relative;
+            bottom:7px;
             font-size:12px;
             text-decoration:none;
             color:var(--tertiary);
+            text-align: center;
+            left:-40px;
+
+        }
+        #footer .about {
+            position: relative;
+            bottom: 7px;
+            right:-20px;
+            font-size:12px;
+            text-decoration:none;
+            color:var(--tertiary);
+            text-align: center;
 
         }
 
@@ -279,8 +291,12 @@
 
     function recoverDark() {
 
-
         let cookie = document.cookie
+
+        if(cookie.indexOf("cookies=true") >= 0){
+            cookies=true
+        }
+
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
             darkmode()
         }
@@ -307,13 +323,17 @@
     function acceptCookies(){
         togglePopup()
 
+        document.cookie="cookies=true"
+
         cookies=true
     }
 
     function onLoad(){
         recoverDark()
 
-        togglePopup()
+        if(!cookies){
+            togglePopup()
+        }
     }
     </script>
     <div class="maincontainer">
@@ -330,12 +350,14 @@
     </div>
     <div id="footer">
     <hr id="sep">
-        <a id="privacy" href="/datenschutz">Datenschutz</a>
+        <a class="privacy" href="/datenschutz">Datenschutz</a>
+        <a class="about" href="/about">Über</a>
 
     </div>
 
      <div class="popup">
-        <span class="popuptext" id="Popup">Popup text...
+        <span class="popuptext" id="Popup"><h1>This Website needs Cookies for the Dark mode to work!</h1>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
         <br>
         <button class="popupbutton" id="cookiesAccept" onclick="acceptCookies()">Accept</button>
         <button class="popupbutton" id="cookiesDecline" onclick="togglePopup()">Decline</button>
