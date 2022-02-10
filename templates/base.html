@@ -12,9 +12,9 @@
         --secondary: #000000;
         --tertiary: #000000;
         --quartary: #0000ff;
-        --quintary: #F9F9F9;
+        --quintary: #d7d7d7;
 
-        overflow: visible;
+        overflow-y: scroll;
       }
 
       .dark {
@@ -23,6 +23,21 @@
         --tertiary: #00b068;
         --quartary: #5369fc;
         --quintary: #13242a;
+      }
+
+      ::-webkit-scrollbar {
+        width: 9px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+        z-index: 0;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--quintary);
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--quintary);
       }
 
       body {
@@ -57,6 +72,17 @@
     #header > #sep {
         position:relative;
         top:-90px;
+    }
+
+    #footer p {
+      margin: 0;
+    }
+
+    .content {
+      width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+      width: -moz-max-content;    /* Firefox/Gecko */
+      width: -webkit-max-content; /* Chrome */
+      width: max-content;
     }
 
     div.content {
@@ -104,11 +130,12 @@
         position: fixed;
         left: 0;
         bottom: 0;
-        width: 100%;
+        width: 105%;
         height: 5%;
         background-color: var(--quintary);
         color: var(--secondary);
         text-align: center;
+        z-index: 1;
       }
       #footer > #sep {
         position: relative;
@@ -293,7 +320,7 @@
     </div>
     <div id="footer">
     <hr id="sep">
-        hi Fuck You
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
 
      <div class="popup">
