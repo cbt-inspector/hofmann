@@ -1,10 +1,18 @@
 {% extends "base.html" %}
-{% block title %}{{cont}}{% endblock %}
+{% block title %}Joachim Hofmann: {{cont}}{% endblock %}
+
 {% block style %}
 <style>
   .icon {
     height: 30px;
     margin-top: 3px;
+  }
+  .homeicon{
+  }
+  .backicon{
+    position:relative;
+    top: 50px;
+    right: 48px;
   }
   span {
     font-size: 30px;
@@ -12,23 +20,49 @@
   a {
     margin-bottom: 5px;
   }
+  #navicon {
+    height:40px;
+    transition-duration: 0.4s;
+    border-radius:50%;
+    border:none/*1px solid black*/;
+    background-color: white;
+  }
+
+  #navicon:hover {
+    background-color: #00b068;
+    color:white;
+  }
+
+  #location {
+    position:relative;
+    top:-82px;
+    left:50px;
+  }
+  div.cont {
+    position:relative;
+    top:-100px;
+    left:50px;
+  }
 </style>
 {% endblock %}
 {% block body %}
-  <h1> {{cont}} </h1>
-  {% if path != ""%}
-  <span>
-    <a href="/{{path}}">
-    <img src="/static/assets/back_arrow.png" alt="file" class="icon"></a>
-  </span>
-  {% else %}
+
   <span>
     <a href="/">
-    <img src="/static/assets/back_house.png" alt="file" class="icon" href="/"></a>
+    <img src="/static/assets/back_house.png" class="homeicon" id="navicon"></a>
     </span>
+
+    {% if path != ""%}
+  <span>
+    <a href="/{{path}}">
+    <img src="/static/assets/back_arrow.png" class="backicon" id="navicon"></a>
+  </span>
   {%endif%}
+  <h1 id="location"> {{cont}} </h1>
+
   <br>
   <br>
+  <div class="cont">
   {% for x in dircont %}
     {% if "." in x %}
       <img src="/static/assets/iconfile.png" alt="file" class="icon">
@@ -43,4 +77,5 @@
     {% endif %}
     <br>
   {% endfor %}
+  </div>
 {% endblock %}

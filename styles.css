@@ -15,6 +15,7 @@ h2 {
   margin: 5px;
   font-size: 34px;
 }
+
 .maincontainer {
   margin: 30px auto auto 15%;
   z-index: 1;
@@ -118,6 +119,7 @@ h2 {
 .hof:hover {
   animation: spin 3s linear infinite;
 }
+
 @keyframes spin {
   50% {
     transform: rotate(3600deg);

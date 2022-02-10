@@ -12,6 +12,8 @@
         --secondary: #000000;
         --tertiary: #000000;
         --quartary: #0000ff;
+
+        overflow: visible;
       }
 
       .dark {
@@ -29,12 +31,50 @@
         background: var(--secondary);
       }
 
+      button {
+          /*background-color:white;*/
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+
+        }
+        .darkswitch {
+            background-color:white;
+            border-radius:50%;
+            position: relative;
+            left: 96%;
+            top:-100px;
+            transition-duration: 0.4s;
+            border:0;
+            display: inline-block;
+        }
+        .darkswitch:hover {
+            background-color: #00b068;
+            color:white;
+
+        }
+
+    #header > #left{
+        position: relative;
+        padding: 5px;
+        margin:0;
+        top:0px;
+    }
+    #header > #sep {
+        position:relative;
+        top:-90px;
+    }
+
+    div.content {
+        position:relative;
+        top: -80px;
+    }
+
       h1, h2, p, a, span {
         font-family: 'Montserrat', sans-serif;
       }
       a {
         font-size: 28px;
-        margin: 4px auto;
         color: var(--quartary);
         text-decoration: none;
       }
@@ -49,6 +89,7 @@
       }
       .maincontainer {
         z-index: 1;
+        overflow: hidden;
       }
       .xcontainer {
         overflow: hidden;
@@ -82,13 +123,20 @@
 
       if (dark != true){
         document.cookie = "darkmode=true"
+
+        document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/light.png\" width=\"30\" height=\"30\">"
+
+        document.getElementById("navicon").backgroundColor = "white"
         dark = true
 
       } else {
         document.cookie = "darkmode=false; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
         dark = false
+
+        document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/dark.png\" width=\"30\"        height=\"30\">"
+//         document.getElementById("navicon").backgroundColor = "var(--tertiary)"
+
       }
-      alert(dark)
     }
 
 
@@ -99,6 +147,8 @@
         if(cookie.indexOf("darkmode=true") >= 0){
             var element = document.body;
             element.classList.toggle("dark");
+
+            document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/light.png\" width=\"30\" height=\"30\">"
             dark = true
         } else {
             dark = false
@@ -106,14 +156,19 @@
     }
     </script>
     <div class="maincontainer">
-      <a href="/">
-        <h1>Joachim hof hof mann mann (based)</h1>
-      </a>
-      <br>
-        <button type="button" onclick="darkmode()">dark</button>
-      <hr>
+    <div id="header">
+    <div id="left">
+        <h1>Joachim Hofmann</h1>
+      </div>
+      <div id="right">
+      <button class="darkswitch" type="button" onclick="darkmode()" id="darkbutton"><img src="/static/assets/dark.png" width="30" height="30"></button>
+      </div>
+      <hr id="sep">
+    </div>
+    <div class="content">
       {% block body %}
       {% endblock %}
+    </div>
     </div>
   </body>
 </html>

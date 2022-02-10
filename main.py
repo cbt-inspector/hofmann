@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home() :
-    path = f"{os.getcwd()}/static/bruh/".replace("\\", "/")
+    path = f"{os.getcwd()}/static/files/".replace("\\", "/")
     #tempcontents = os.listdir(path)
     #dircontents = []
     #for x in tempcontents:
@@ -50,7 +50,7 @@ def folder(link, file) :
     #
     #return ''.join([f"{str(x)}-- " for x in dir_list])
     href = f"{link}*{file}"
-    path = f"{os.getcwd()}/static/bruh/".replace("\\", "/")
+    path = f"{os.getcwd()}/static/files/".replace("\\", "/")
     npath = link.replace("*", "/")
     pth = npath
     if "JAHRGANGSSTUFE" in npath:
