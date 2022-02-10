@@ -138,7 +138,7 @@ def page_not_found(e):
     # note that we set the 404 status explicitly
     code = "404"
     description = "Page not found (go cry)-----"
-    #dont make that ^^^^ longer than this ----|"
+    #dont make that ^^^^ longer than this ----|"    (28 characters)
     return render_template('error.html', errcode= code, description= description), 404
 
 
