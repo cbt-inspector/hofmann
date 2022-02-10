@@ -117,7 +117,9 @@ def folder(link, file) :
         for x in os.listdir(fullpath):
             dircont.append(x)
         return render_template("dir.html", path = pth , cont= f"{npath}/{file}", dircont= dircont, href= href)
-
+@app.route("/datenschutz")
+def datenschutz():
+    return render_template("datenschutz.html")
 
 #@app.errorhandler("404")
 #def page_not_found(e):
