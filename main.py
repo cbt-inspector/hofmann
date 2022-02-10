@@ -126,6 +126,10 @@ def folder(link, file) :
 def datenschutz():
     return render_template("datenschutz.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 @app.route("/update")
 def update():
     repo.remotes.origin.fetch()
@@ -137,7 +141,7 @@ def update():
 def page_not_found(e):
     # note that we set the 404 status explicitly
     code = "404"
-    description = "Page not found (go cry)-----"
+    description = "Page not found (go cry)----------------------------------------------------------"
     #dont make that ^^^^ longer than this ----|"    (28 characters)
     return render_template('error.html', errcode= code, description= description), 404
 
