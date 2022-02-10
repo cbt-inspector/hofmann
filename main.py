@@ -80,7 +80,7 @@ $ pip install requirements.txt
 @app.route("/")
 def home() :
     path = f"{os.getcwd()}/static/files/".replace("\\", "/")
-    dircontents = ["Klasse6","Klasse7","Klasse9","Klasse10","Klasse11","Klasse12","EA"]
+    dircontents = ["Klasse6","Klasse7","Klasse9","Klasse10","Klasse11","Klasse12","EngineAlpha"]
     fulllist = []
     for x in dircontents:
         bruh = f"{path}{x}"
@@ -88,8 +88,8 @@ def home() :
         if "Klasse" in x:
                 sus = x.split("Klasse")
                 temp.append(f"{sus[1]}. Jahrgangsstufe")
-        elif x == "EA":
-                temp.append("Engine Alpha")
+        elif x == "EngineAlpha":
+                temp.append("EngineAlpha")
         fulllist.append(temp)
     return render_template("index.html", dircontents= fulllist)
 
@@ -105,7 +105,7 @@ def folder(link, file) :
         sus = npath.replace("JAHRGANGSSTUFE","")
         npath = f"Klasse{sus}"
     elif npath.startswith("EngineAlpha"):
-        npath = npath.replace("EngineAlpha", "EA", 1)
+        npath = npath.replace("EngineAlpha", "EngineAlpha", 1)
     dircont = []
     fullpath = f"{path}{npath}/{file}"
 
