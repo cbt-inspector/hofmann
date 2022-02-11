@@ -74,15 +74,35 @@
             top: -20px
         }
 
-
-
-        #header h1 {
-
-            }
-
     #header > #sep {
         position:relative;
         top:-90px;
+    }
+
+/*    #header #logo .title {
+        position: relative;
+        font-size:32px;
+        top: -15px;
+        left: 10px;
+    }*/
+
+    #header #logo #text1 {
+        position: relative;
+        font-size:32px;
+        top: -45px;
+        left: 20px;
+        color:var(--tertiary);
+        text-decoration:none;
+
+    }
+
+    #header #logo #text2 {
+        position: relative;
+        font-size:32px;
+        top: -15px;
+        left: -180px;
+        color:var(--tertiary);
+        text-decoration:none;
     }
 
     #footer p {
@@ -159,9 +179,6 @@
         position: relative;
         left:85%;
         top: -95px;
-        border:0;
-        border-radius:100%;
-        background-color: var(--primary);
         width: 50px;
         height: 50px;
         cursor: pointer;
@@ -305,7 +322,6 @@
             document.cookie = "darkmode=true; path=/;"
         }
         document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/dark.png\" width=\"30\" height=\"30\">"
-        document.getElementById("logo").innerHTML = "<img src=\"/static/assets/brand_icon.png\">"
 
         document.getElementById("navicon").backgroundColor = "white"
         dark = true
@@ -317,9 +333,10 @@
         dark = false
 
         document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/light.png\" width=\"30\" height=\"30\">"
-        document.getElementById("logo").innerHTML = "<img src=\"/static/assets/brand_icon_dark.png\">"
 
       }
+
+      window.location.reload()
     }
 
 
@@ -341,12 +358,12 @@
             element.classList.toggle("dark");
 
             document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/light.png\" width=\"30\" height=\"30\">"
-            document.getElementById("logo").innerHTML = "<img src=\"/static/assets/brand_icon_dark.png\">"
 
             dark = true
         } else {
             dark = false
         }
+
     }
 
     function togglePopup(){
@@ -375,7 +392,7 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
     <div class="maincontainer">
     <div id="header">
-        <h1><a id="logo" href="/"><img src="/static/assets/brand_icon.png"></a></h1>
+        <h1><a id="logo" href="/"><img src="/static/assets/icon.png"><span class="title" id="text1">Hofmann Web</span><span class="title" id="text2">Services</span></a></h1>
       <button class="darkswitch" type="button" onclick="darkmode()" id="darkbutton"><img src="/static/assets/dark.png" width="30" height="30"></button>
       <a class="phpadmin" type="button" href="/phpmyadmin"><img src="/static/assets/phpmyadmin.png" width="50" height="50"></a>
       <hr id="sep">
