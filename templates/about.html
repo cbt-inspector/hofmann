@@ -3,22 +3,68 @@
 {% block style %}
 <style>
 
-#aboutIcon {}
+#content {
+    position: relative;
+    left:60px;
+    bottom: 80px;
+}
+
+#content h1 {
+    color: #00b068;
+}
+
+#aboutIcon {
+    position: relative;
+    left: 20px;
+    top: -5px;
+}
+
+#content .creators{
+    position:relative;
+    left:60px;
+
+}
+
+#content .creators .creator {
+    position: relative;
+    left:20px;
+    text-decoration: none;
+    color:#00b068
+}
+
+  #navicon {
+    height:40px;
+    transition-duration: 0.4s;
+    border-radius:50%;
+    border:/*none*/2px solid #F5F5F5;
+    background-color: #F5F5F5;
+  }
+
+  #navicon:hover {
+    background-color: #00b068;
+  }
 
 </style>
 {% endblock %}
 {% block body %}
-<div id="header">
+
+    <a href="/"><img src="/static/assets/back_house.png" class="homeicon" id="navicon"></a>
+
+<div id="content">
         <h1>About</h1>
-</div>
-<!-- <hr width="100%"> -->
+
 <div class="creators">
     <h2>Creators</h2>
+    <br>
+    <img id="aboutIcon" src="/static/assets/github.svg" height="50" width="50">
+    <br>
+    <a class=creator href="https://github.com/moehreag">moehreag</a>
+    <br>
+    <a class=creator href="https://github.com/schlingelTV">SchlingelTV</a>
+    <br>
+    <a class=creator href="https://github.com/sussy-balls-impostor">Sussy-Balls-Impostor</a>
 
-    <span class=""> moehreag
-    <a href="https://github.com/moehreag"><img id="aboutIcon" src="/static/assets/github.svg" height="25" width="25"></a>
-
-    </span>
+</div>
 </div>
 {% endblock %}
 
