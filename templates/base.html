@@ -305,7 +305,7 @@
     </style>
   </head>
   <body onLoad="onLoad()">
-    <script src="https://cdn.jsdelivr.net/combine/npm/js-cookie@3.0.1,npm/js-cookie@3.0.1/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3/dist/js.cookie.min.js"></script>
     <script>
     var dark
     let cookies = false
@@ -329,7 +329,7 @@
 
       } else {
         if (cookies){
-           Cookies.set('darkmode','false')
+           Cookies.remove('darkmode')
         }
         dark = false
 
@@ -343,9 +343,9 @@
 
     function recoverDark() {
 
-        let cookie = document.cookie
+        //let cookie = document.cookie
 
-        if(Cookies.get(cookies)=="true"){
+        if(Cookies.get("cookies")=="true"){
             cookies=true
         }
 
