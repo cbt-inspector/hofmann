@@ -7,7 +7,9 @@
 {% endblock %}
 {% block body %}
 <script>
+  var epic = false
   function epicHacker() {
+    epic = true
     
   }
 </script>
@@ -16,6 +18,6 @@
       <p> The server refuses to brew coffee because it is, permanently, a teapot.</p>
     </div>
     <div id = "buttonHacker">
-      <button type="button"><img src="static\assets\HackerIcon.png"width="30" height="30"></button>
+      <button type="button"onclick="epicHacker()"><img src="static\assets\HackerIcon.png"width="30" height="30"></button>
     </div>
 {% endblock %}
