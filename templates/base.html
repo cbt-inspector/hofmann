@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
-    {% block link %}{% endblock %}
-    {% block style %}{% endblock %}
-    <link rel = "stylesheet" href="static/css/base.css">
-  </head>
-  <body onLoad="onLoad()">
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3/dist/js.cookie.min.js"></script>
-    <script src="/static/js/base.js"></script>
-    <div class="maincontainer">
-    <div id="header">
-        <h1><a id="logo" href="/"><img src="/static/assets/favicon.png"><span class="title" id="text1">Hofmann Web</span><span class="title" id="text2">Services</span></a></h1>
-      <button class="darkswitch" type="button" onclick="darkmode()" id="darkbutton"><img src="/static/assets/dark.png" width="30" height="30"></button>
-      <a class="phpadmin" type="button" href="/phpmyadmin"><img src="/static/assets/phpmyadmin.png" width="50" height="50"></a>
-      <hr id="sep">
-    </div>
-    <div class="content">
-      {% block body %}
-      {% endblock %}
-    </div>
-    </div>
-    <div id="footer">
-    <hr id="sep">
-        <a class="privacy" href="/datenschutz">Datenschutz</a>
-        <a class="about" href="/about">Über uns</a>
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+        {% block style %}{% endblock %}
+        <link rel = "stylesheet" href="static\css\base.css">
+    </head>
+    <body onLoad="onLoad()">
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3/dist/js.cookie.min.js"></script>
+        <script src="/static/js/base.js"></script>
+        <div class="maincontainer">
+            <div id="header">
+                <h1>
+                    <a id="logo" href="/">
+                        <img src="/static/assets/favicon.png">
+                        <span class="title" id="text1">
+                            Hofmann Web
+                        </span>
+                        <span class="title" id="text2">
+                            Services
+                        </span>
+                    </a>
+                </h1>
+            <button class="darkswitch" type="button" onclick="darkmode()" id="darkbutton">
+                <img src="/static/assets/dark.png" width="30" height="30">
+            </button>
+            <a class="phpadmin" type="button" href="/phpmyadmin">
+                <img src="/static/assets/phpmyadmin.png" width="50" height="50">
+            </a>
+            <hr id="sep">
+        </div>
+        <div class="content">
+        {% block body %}
+        {% endblock %}
+        </div>
+        </div>
+        <div id="footer">
+            <hr id="sep">
+            <a class="privacy" href="/datenschutz">
+                Datenschutz
+            </a>
+            <a class="about" href="/about">
+                Über uns
+            </a>
+        </div>
+        <div class="popup">
+            <span class="popuptext" id="Popup">
+                <h1 id="popuptitle">
+                    A cookie 🍪 for your darkmode?
+                </h1>
+                <br>
+                <button class="popupbutton" id="cookiesAccept" onclick="acceptCookies()">
+                    Y
+                </button>
+                <button class="popupbutton" id="cookiesDecline" onclick="togglePopup()">
+                    N
+                </button>
+            </span>
+        </div>
 
-    </div>
-
-     <div class="popup">
-        <span class="popuptext" id="Popup"><h1 id="popuptitle">A cookie 🍪 for your darkmode?</h1>
-        <br>
-        <button class="popupbutton" id="cookiesAccept" onclick="acceptCookies()">Y</button>
-        <button class="popupbutton" id="cookiesDecline" onclick="togglePopup()">N</button>
-        </span>
-    </div>
-
-  </body>
+    </body>
 </html>
