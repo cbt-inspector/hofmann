@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>{% block title %}{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+        {% block link %}{% endblock %}
         {% block style %}{% endblock %}
         <link rel = "stylesheet" href="/static/css/base.css">
     </head>
