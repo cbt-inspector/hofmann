@@ -1,0 +1,38 @@
+.icon {
+    height: 30px;
+    margin-top: 3px;
+  }
+  .backicon{
+    position:relative;
+    top: 50px;
+    right: 51px;
+  }
+  span {
+    font-size: 30px;
+  }
+  a {
+    margin-bottom: 5px;
+  }
+  #navicon {
+    height:40px;
+    transition-duration: 0.4s;
+    border-radius:50%;
+    border:/*none*/2px solid #F5F5F5;
+    background-color: #F5F5F5;
+  }
+
+  #navicon:hover {
+    background-color: #00b068;
+  }
+
+  #location {
+    position:relative;
+    top:-82px;
+    left:50px;
+    color:#00b068;
+  }
+  div.cont {
+    position:relative;
+    top:-100px;
+    left:50px;
+  }
