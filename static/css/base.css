@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --primary: #F5F5F5;
+    --secondary: #000000;
+    --tertiary: #292929;
+    --quartary: #0000ff;
+    --quintary: #d7d7d7;
+
+    overflow-y: scroll;
+  }
+
+  .dark {
+    --primary: #0d191d;
+    --secondary: #ffffff;
+    --tertiary: #00b068;
+    --quartary: #5369fc;
+    --quintary: #13242a;
+  }
+
+  ::-webkit-scrollbar {
+    width: 9px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    z-index: 0;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--quintary);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--quintary);
+  }
+
+  body {
+    background: var(--primary);
+  }
+
+  hr {
+    background: var(--secondary);
+  }
+
+  button {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+
+    }
+    .darkswitch {
+        background-color:#F5F5F5;
+        border-radius:50%;
+        position: relative;
+        left: 96%;
+        top:-100px;
+        transition-duration: 0.4s;
+        border:0;
+        display: inline-block;
+    }
+    .darkswitch:hover {
+        background-color: #00b068;
+
+    }
+
+    #header {
+        position:relative;
+        top: -20px
+    }
+
+#header > #sep {
+    position:relative;
+    top:-90px;
+}
+
+/*    #header #logo .title {
+    position: relative;
+    font-size:32px;
+    top: -15px;
+    left: 10px;
+}*/
+
+#header #logo #text1 {
+    position: relative;
+    font-size:32px;
+    top: -45px;
+    left: 20px;
+    color:var(--tertiary);
+    text-decoration:none;
+
+}
+
+#header #logo #text2 {
+    position: relative;
+    font-size:32px;
+    top: -15px;
+    left: -180px;
+    color:var(--tertiary);
+    text-decoration:none;
+}
+
+#footer p {
+  margin: 0;
+}
+
+.content {
+  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content;    /* Firefox/Gecko */
+  width: -webkit-max-content; /* Chrome */
+  width: max-content;
+}
+
+div.content {
+    position:relative;
+    top: -80px;
+}
+
+  h1, h2, p, a, span, button {
+    font-family: 'Montserrat', sans-serif;
+  }
+  p {color: var(--tertiary)}
+  a {
+    font-size: 28px;
+    color: var(--quartary);
+    text-decoration: none;
+  }
+  h1 {
+    font-size: 42px;
+    color: var(--secondary);
+  }
+  h2 {
+    margin: 5px;
+    font-size: 34px;
+    color: var(--tertiary);
+  }
+  .maincontainer {
+    z-index: 1;
+    overflow: hidden;
+  }
+  .xcontainer {
+    overflow: hidden;
+  }
+  .xdrop {
+    margin-left: 25px;
+    border: solid var(--secondary);
+    border-width: 0 0 0 2px;
+    border-radius: 5px;
+    padding-left: 20px;
+    max-height: 0;
+    transition-duration: 1.2s;
+  }
+  .xcontainer:hover .xdrop {
+    max-height: 2000px;
+  }
+  #footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 105%;
+    height: 5%;
+    background-color: var(--quintary);
+    color: var(--secondary);
+    text-align: center;
+    z-index: 1;
+  }
+  #footer > #sep {
+    position: relative;
+    bottom: 10px;
+    color:#35393F;
+  }
+
+  .phpadmin {
+    position: relative;
+    left:85%;
+    top: -95px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+  /* Popup container - can be anything you want */
+    .popup {
+    position: fixed;
+    bottom: 50%;
+    right: 220px;
+    display: inline-block;
+    }
+
+    .popup h1 {
+      font-size: 15px;
+/*           text-shadow: 1px 1px 2px #fff; */
+    }
+    .popup button {
+      font-weight: bolder;
+    }
+
+    /* The actual popup */
+    .popup .popuptext {
+    visibility: hidden;
+    font-size: 15px;
+    width: 300px;/*160px;*/
+    height: 80px;
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    text-align: center;
+    border-radius: 6px 0px 0px 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    }
+
+    .popup .popuptext::after {
+      visibility: hidden;
+    }
+
+    .popup .popupbutton {
+        position: absolute;
+        background: var(--primary);
+        bottom: 10px;
+        width: 35px;
+        height: 35px;
+        border: 2px solid;
+        border-radius: 60%;
+        transition-duration: 0.5s;
+    }
+
+    .popup .popupbutton:hover{
+        background-color: var(--secondary);
+    }
+
+    .popup #cookiesAccept {
+        position: absolute;
+        font-size: 15px;
+        left: 5%;
+        border-color: #00ff00;
+        color: #00ff00;
+    }
+
+    .popup #cookiesDecline {
+        position: absolute;
+        font-size: 15px;
+        left: 21%;
+        border-color: #ff0000;
+        color: #ff0000;
+    }
+
+    .popup #popuptitle {
+        color:#FFFFFF;
+    }
+
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+    from {right: -15%;}
+    to {right: 12%;}
+    }
+
+    @keyframes fadeIn {
+    from {right: -15%;}
+    to {right: 12%;}
+    }
+
+    #footer .privacy {
+        position: relative;
+        bottom:7px;
+        font-size:12px;
+        text-decoration:none;
+        color:var(--tertiary);
+        text-align: center;
+        left:-40px;
+
+    }
+    #footer .about {
+        position: relative;
+        bottom: 7px;
+        right:-20px;
+        font-size:12px;
+        text-decoration:none;
+        color:var(--tertiary);
+        text-align: center;
+
+    }
+
+
