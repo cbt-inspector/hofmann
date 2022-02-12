@@ -305,6 +305,7 @@
     </style>
   </head>
   <body onLoad="onLoad()">
+    <script src="https://cdn.jsdelivr.net/combine/npm/js-cookie@3.0.1,npm/js-cookie@3.0.1/index.min.js"></script>
     <script>
     var dark
     let cookies = false
@@ -319,7 +320,7 @@
       if (dark != true){
 
         if (cookies){
-            document.cookie = "darkmode=true; path=/;"
+            Cookies.set('darkmode','true')
         }
         document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/dark.png\" width=\"30\" height=\"30\">"
 
@@ -328,7 +329,7 @@
 
       } else {
         if (cookies){
-            document.cookie = "darkmode=false; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
+           Cookies.set('darkmode','false')
         }
         dark = false
 
@@ -353,7 +354,7 @@
         }
 
 
-        if(cookie.indexOf("darkmode=true") >= 0){
+        if(Cookies.get('darkmode') == true){
             var element = document.body;
             element.classList.toggle("dark");
 
