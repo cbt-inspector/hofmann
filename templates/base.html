@@ -329,7 +329,7 @@
 
       } else {
         if (cookies){
-           Cookies.set('darkmode','false')
+           Cookies.remove('darkmode')
         }
         dark = false
 
@@ -361,8 +361,10 @@
             document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/light.png\" width=\"30\" height=\"30\">"
 
             dark = true
-        } else {
+        } 
+        else {
             dark = false
+            
         }
 
     }
