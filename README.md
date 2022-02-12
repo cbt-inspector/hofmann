@@ -41,6 +41,8 @@ Functions in files:
 Setup:
 - install all required dependencies via
 $ pip install -r requirements.txt
+and 
+$ npm i js-cookie
 
 - This script is meant to be running on an uWSGI server, preferrably behind nginx.
     Quickstart docs: https://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html
@@ -66,3 +68,6 @@ Testing the website locally:
 $ pip install -r requirements.txt
 
 - Testing after this step is easy, just run this python script and open up http://127.0.0.1:5000 in your browser.
+
+https://github.com/js-cookie/js-cookie 
+ -The Cookie lib
