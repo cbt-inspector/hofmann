@@ -345,7 +345,7 @@
 
         let cookie = document.cookie
 
-        if(cookie.indexOf("cookies=true") >= 0){
+        if(Cookies.get(cookies)=="true"){
             cookies=true
         }
 
@@ -354,7 +354,7 @@
         }
 
 
-        if(Cookies.get('darkmode') == true){
+        if(Cookies.get('darkmode') == "true"){
             var element = document.body;
             element.classList.toggle("dark");
 
@@ -377,7 +377,7 @@
     function acceptCookies(){
         togglePopup()
 
-        document.cookie="cookies=true; path=/;"
+        Cookies.set('cookies', 'true')
 
         cookies=true
     }
