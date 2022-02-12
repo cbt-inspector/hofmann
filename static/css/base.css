@@ -180,9 +180,10 @@ div.content {
   /* Popup container - can be anything you want */
     .popup {
     position: fixed;
-    bottom: 50%;
+    bottom: 20%;
     right: 220px;
     display: inline-block;
+    animation: bobup 1.5s linear;
     }
 
     .popup h1 {
@@ -193,28 +194,44 @@ div.content {
       font-weight: bolder;
     }
 
+    @keyframes bobup {
+        from {
+            right: -300px;
+        } to {
+            right: 220px;
+        }
+    }
+
+
     /* The actual popup */
     .popup .popuptext {
-    visibility: hidden;
-    font-size: 15px;
-    width: 300px;/*160px;*/
-    height: 80px;
-    background-color: var(--tertiary);
-    color: var(--secondary);
-    text-align: center;
-    border-radius: 6px 0px 0px 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
+        font-size: 15px;
+        width: 300px;/*160px;*/
+        height: 80px;
+        background-color: var(--tertiary);
+        color: var(--secondary);
+        text-align: center;
+        border-radius: 6px 0px 0px 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
     }
 
     .popup .popuptext::after {
-      visibility: hidden;
+      animation: bobup2 1.5s linear;
     }
-
+    @keyframes bobup2 {
+        0% {
+            right: 220px;
+        } 99% {
+            right: -300px;
+        } 100% {
+            right: -300px;
+        }
+    }
     .popup .popupbutton {
         position: absolute;
         background: var(--primary);
@@ -252,21 +269,10 @@ div.content {
 
     /* Toggle this class - hide and show the popup */
     .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+        animation: bobup2 1s linear;
     }
 
     /* Add animation (fade in the popup) */
-    @-webkit-keyframes fadeIn {
-    from {right: -15%;}
-    to {right: 12%;}
-    }
-
-    @keyframes fadeIn {
-    from {right: -15%;}
-    to {right: 12%;}
-    }
 
     #footer .privacy {
         position: relative;
@@ -288,5 +294,3 @@ div.content {
         text-align: center;
 
     }
-
-
