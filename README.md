@@ -1,41 +1,51 @@
 Main script for the website of Joachim Hofmann
 
 Functions in files:
+
 - main.py:
     - routing of requests via flask
     - returning HTML files with jinja2 arguments
     - serving these files to the user
 
-- requirements.txt
+- requirements.txt:
     - text file for all required Python modules for easy installation
 
-- app.ini
+- app.ini:
     - Init file for an uwsgi server (with arguments)
-
-- css
-    - CSS files in the static/css folder 
-
-- javascript
-    - js files in the static/js folder 
 
 - templates folder:
 
-    - base.html
-    - base template for the webpage
-    - including JS functions for e.g. the darkmode
-    - CSS stylings
+    - base.html:
+        - base template for the webpage
 
-    - index.html
+    - index.html:
         - the main page including building up the list of directories
 
-    - dir.html
+    - dir.html:
         - template for building up the list of directory contents
         - navigation buttons, current location listing
 
 - static folder:
 
+    - css folder:
+        - base.js:
+            - Base Styles used all over the page.
+        - about.css:
+            - Styles for the 'about.html' template page.
+        - datenschutz.css:
+            - Styles for the 'datenschutz.html' template page.
+        - dir.css:
+            - Styles for the 'about.html' template page.
+        - error.css:
+            - Styles for the Error page.
+
+    - js folder:
+        - base.js:
+            - Main JavaScript functions for the page.
+
     - assets folder:
         - Icons used on the pages
+        - Backgrounds for pages
 
     - files folder:
         - All files to be served as content on the page
