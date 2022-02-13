@@ -48,7 +48,7 @@ function recoverDark() {
     }
 
 
-    if(Cookies.get('darkmode') == "true"&&!Cookies.get('epic')=='true'){
+    if(Cookies.get('darkmode') == "true"&&Cookies.get('epic')!='true'){
         var element = document.body;
         element.classList.toggle("dark");
 
