@@ -2,11 +2,25 @@
 {% block title %}Hofmann Web Services{% endblock %}
 {% block style %}
 <style>
-  
+  .promos {
+    position:absolute;
+    width:160px;
+    height:160px;
+    right:5px;
+     bottom:440px;
+      }
+    .xcontainer {
+        position:relative;
+        bottom:100%;
+    }
 </style>
 {% endblock %}
 {% block body %}
+
+<table>
+<td>
 {% for x in dircontents %}
+
   <div class="xcontainer">
     <h2>{{x[-1]}}</h2>
     <div class="xdrop">
@@ -19,4 +33,12 @@
     </div>
   </div>
 {% endfor %}
+
+</td>
+<td>
+<div class="promos">
+    <a class="intellij" href="https://www.jetbrains.com/idea/download/"><img src="/static/assets/intellijlogo.png"></a>
+    <a class="bluej" href="https://www.bluej.org/"><img src="/static/assets/bluej-icon.png"></a>
+</div>
+</td>
 {% endblock %}
