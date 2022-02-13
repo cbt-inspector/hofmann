@@ -7,6 +7,7 @@ let cookies = false
 
 function darkmode() {
     epicHacker()
+    
     var element = document.body;
     element.classList.toggle("dark");
 
@@ -25,6 +26,7 @@ function darkmode() {
     } else {
     if (cookies){
         Cookies.remove('darkmode')
+        
     }
     dark = false
     document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/dark.png\" class=\"darkswitchpic\">"
@@ -46,14 +48,14 @@ function recoverDark() {
     }
 
 
-    if(Cookies.get('darkmode') == "true"){
+    if(Cookies.get('darkmode') == "true"&&!Cookies.get('epic')=='true'){
         var element = document.body;
         element.classList.toggle("dark");
 
         document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/light.png\" class=\"darkswitchpic\">"
 
         dark = true
-    } else if (Cookies.get('darkmode')==="2"){
+    } else if (Cookies.get('epic')=="true"){
         var element = document.body;
         element.classList.toggle("hacker");
     } else {
@@ -95,8 +97,7 @@ function epicHacker(){
         var element = document.body;
         element.classList.toggle("hacker");
         alert("Hacker Mode activated!")
-        Cookies.remove('darkmode')
-        Cookies.set('darkmode','2')
+        Cookies.set('epic','true')
         //activates Hacker Mode
 
     }
