@@ -34,6 +34,7 @@
 
   body {
     background: var(--primary);
+    margin: 0;
   }
 
   hr {
@@ -49,53 +50,55 @@
     .darkswitch {
         background-color:#F5F5F5;
         border-radius:50%;
-        position: relative;
-        left: 96%;
-        top:-135px;
         transition-duration: 0.4s;
-        border:0;
-        display: inline-block;
+        border: none;
+        margin: 0 auto auto 46px;
     }
     .darkswitch:hover {
         background-color: #00b068;
-
+    }
+    .darkswitch .darkswitchpic {
+        height: 30px;
+        width: 30px;
+        margin: auto auto auto 4px;
     }
 
-    #header {
-        position:relative;
-        top: -20px
+    .header {
+      height: 130px;
+      overflow: hidden;
+      background: linear-gradient(60deg, var(--quintary) 23%, #0088ff  35%, #1c9e75 35% 45%, #97d07e 45% 55%, #74befe 55%, 65%, #51af30 65%, var(--quintary) 80%);
+      padding-left: 1vw;
+      border-bottom: 2px solid var(--secondary);
+    }
+    .header img {
+      float: left;
+      margin-right: -0.4vw;
+      margin-top: -8px;
+      height: 150px;
+    }
+    .header h1 {
+      margin-top: 11px;
+    }
+    .header .text {
+      width: 320px;
+      text-align: center;
+      float: left;
+    }
+    .header .buttons {
+      margin-right: 10px;
+      margin-left: auto;
+      width: 113px;
+      float: right;
+    }
+    .header .phppic {
+      height: 70px;
+      margin-top: 2px;
     }
 
-#header > #sep {
-    position:relative;
-    top:-90px;
-}
 
-/*    #header #logo .title {
-    position: relative;
-    font-size:32px;
-    top: -15px;
-    left: 10px;
-}*/
 
-#header #logo #text1 {
-    position: relative;
-    font-size:32px;
-    top: -45px;
-    left: 20px;
-    color:var(--tertiary);
-    text-decoration:none;
 
-}
 
-#header #logo #text2 {
-    position: relative;
-    font-size:32px;
-    top: -15px;
-    left: -180px;
-    color:var(--tertiary);
-    text-decoration:none;
-}
 
 #footer p {
   margin: 0;
@@ -106,11 +109,7 @@
   width: -moz-max-content;    /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
   width: max-content;
-}
-
-div.content {
-    position:relative;
-    top: -80px;
+  margin-left: 20px;
 }
 
   h1, h2, p, a, span, button {

@@ -12,26 +12,22 @@
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@3/dist/js.cookie.min.js"></script>
         <script src="/static/js/base.js"></script>
         <div class="maincontainer">
-            <div id="header">
-                <h1>
-                    <a id="logo" href="/">
-                        <img src="/static/assets/favicon.png">
-                        <span class="title" id="text1">
-                            Hofmann Web
-                        </span>
-                        <span class="title" id="text2">
-                            Services
-                        </span>
-                    </a>
-                </h1>
-            <button class="darkswitch" type="button" onclick="darkmode()" id="darkbutton">
-                <img src="/static/assets/dark.png" width="30" height="30">
-            </button>
-            <a class="phpadmin" href="/phpmyadmin">
-                <img src="/static/assets/phpmyadmin.png" width="70" height="70">
-            </a>
-            <hr id="sep">
-        </div>
+            <div class="header">
+                <a href="/">
+                  <img src="/static/assets/favicon.png" alt="LOGO" class="logo">
+                  <div class="text">
+                    <h1>Hofmann Web Services</h1>
+                  </div>
+                </a>
+                <div class="buttons">
+                  <a href="/phpmyadmin">
+                    <img src="/static/assets/phpmyadmin.png" alt="PHP" class="phppic">
+                  </a>
+                  <button class="darkswitch" type="button" onclick="darkmode()" id="darkbutton">
+                    <img src="/static/assets/dark.png" class="darkswitchpic">
+                  </button>
+                </div>
+            </div>
         <div class="content">
         {% block body %}
         {% endblock %}

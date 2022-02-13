@@ -15,7 +15,7 @@ function darkmode() {
     if (cookies){
         Cookies.set('darkmode','true')
     }
-    document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/light.png\" width=\"30\" height=\"30\">"
+    document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/light.png\" class=\"darkswitchpic\">"
 
     document.getElementById("navicon").backgroundColor = "white"
     dark = true
@@ -25,7 +25,7 @@ function darkmode() {
         Cookies.remove('darkmode')
     }
     dark = false
-    document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/dark.png\" width=\"30\" height=\"30\">"
+    document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/dark.png\" class=\"darkswitchpic\">"
 
     }
 
@@ -50,7 +50,7 @@ function recoverDark() {
         var element = document.body;
         element.classList.toggle("dark");
 
-        document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/light.png\" width=\"30\" height=\"30\">"
+        document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/light.png\" class=\"darkswitchpic\">"
 
         dark = true
     }
