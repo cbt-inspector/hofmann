@@ -2,17 +2,17 @@
 {% block title %}Hofmann Web Services{% endblock %}
 {% block style %}
 <style>
-  .promos {
+.promos {
     position:absolute;
-    width:100px;
-    height:100px;
     right:80px;
-     bottom:500px;
-      }
+    bottom:200px;
+}
+/*.promos .promo-icon {
+    fill:var(--primary);
+}*/
 
-    .promos .bluej {
 
-    }
+
     .xcontainer {
         position:relative;
         bottom:100%;
@@ -41,8 +41,12 @@
 </td>
 <td>
 <div class="promos">
-    <a class="intellij" href="https://www.jetbrains.com/idea/download/"><img src="/static/assets/intellijlogo.png"></a>
-    <a class="bluej" href="https://www.bluej.org/"><img src="/static/assets/bluej-icon.png"></a>
+    <a class="intellij" href="https://www.jetbrains.com/idea/download/"><img class="promo-icon" src="/static/assets/intellijlogo.png"></a>
+    <br>
+    <a class="bluej" href="https://www.bluej.org/"><img class="promo-icon" src="/static/assets/bluej-icon.png" width="180" height="150"></a>
+    <br>
+    <a class="guthib" href="https://www.github.org/"><img class="promo-icon" src="/static/assets/github.svg"></a>
+    <br>
 </div>
 </td>
 {% endblock %}
