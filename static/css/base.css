@@ -179,7 +179,7 @@
     cursor: pointer;
   }
     #popup {
-      position: absolute;
+      position: fixed;
       transition-duration: 1s;
     }
     .show {
