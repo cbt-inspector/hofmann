@@ -5,6 +5,7 @@ import werkzeug, os, git
 repo = git.Repo('.')
 
 app = Flask(__name__)
+filespath="static/files/"#relative paths start with the folder name, absolute paths with an /.
 
 
 '''
@@ -13,9 +14,13 @@ Main script for the website of Joachim Hofmann
 
 '''
 # Haupt seite
+
+if filespath[0]!="/":
+    filespath=os.getcwd()+"/"+filespath
+
 @app.route("/")
 def home() :
-    path = f"{os.getcwd()}/static/files/".replace("\\", "/")
+    path = filespath.replace("\\", "/")
     dircontents = ["Klasse6","Klasse7","Klasse9","Klasse10","Klasse11","Klasse12","EngineAlpha"]
     fulllist = []
     for x in dircontents:
@@ -34,7 +39,7 @@ def home() :
 def folder(link, file) :
 
     href = f"{link}*{file}"
-    path = f"{os.getcwd()}/static/files/".replace("\\", "/")
+    path = filespath.replace("\\", "/")
     npath = link.replace("*", "/")
     pth = npath
     if "JAHRGANGSSTUFE" in npath:
