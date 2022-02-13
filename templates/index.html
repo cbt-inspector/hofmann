@@ -4,12 +4,36 @@
 <style>
 .promos {
     position:absolute;
-    right:80px;
-    bottom:200px;
+    right: 30px;
+    top: 180px;
 }
-/*.promos .promo-icon {
-    fill:var(--primary);
-}*/
+
+.promos .promo-icon {
+    height: 70px;
+}
+
+.promos .promo-icon:hover {
+  animation: wiggle 1.5s linear infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-7deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(7deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+
+}
 
 
 
@@ -21,10 +45,7 @@
 {% endblock %}
 {% block body %}
 
-<table>
-<td>
 {% for x in dircontents %}
-
   <div class="xcontainer">
     <h2>{{x[-1]}}</h2>
     <div class="xdrop">
@@ -38,15 +59,13 @@
   </div>
 {% endfor %}
 
-</td>
-<td>
 <div class="promos">
     <a class="intellij" href="https://www.jetbrains.com/idea/download/"><img class="promo-icon" src="/static/assets/intellijlogo.png"></a>
     <br>
-    <a class="bluej" href="https://www.bluej.org/"><img class="promo-icon" src="/static/assets/bluej-icon.png" width="180" height="150"></a>
+    <a class="bluej" href="https://www.bluej.org/"><img class="promo-icon" src="/static/assets/bluej-icon.png"></a>
     <br>
     <a class="guthib" href="https://www.github.org/"><img class="promo-icon" src="/static/assets/github_light.png"></a>
     <br>
 </div>
-</td>
+
 {% endblock %}
