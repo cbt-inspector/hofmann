@@ -63,7 +63,8 @@ function recoverDark() {
 
 function togglePopup(){
 
-    var popup = document.getElementById("Popup");
+    var popup = document.getElementById("popup");
+    popup.classList.toggle("notshow");
     popup.classList.toggle("show");
 
 }
@@ -90,13 +91,13 @@ function epicHacker(){
         hacker=0
         alert("Hacker Mode activated!")
         //activates Hacker Mode
-        
+
     }
 
 
     //alert(hacker)
     setTimeout(() => clearHacker(), 1000)
-    
+
 
 }
 function clearHacker(){
