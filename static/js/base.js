@@ -95,6 +95,7 @@ function epicHacker(){
         var element = document.body;
         element.classList.toggle("hacker");
         alert("Hacker Mode activated!")
+        Cookies.remove('darkmode')
         Cookies.set('darkmode','2')
         //activates Hacker Mode
 
