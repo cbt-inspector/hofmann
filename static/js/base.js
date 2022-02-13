@@ -99,6 +99,9 @@ function epicHacker(){
         alert("Hacker Mode activated!")
         Cookies.set('epic','true')
         //activates Hacker Mode
+        if(Cookies.get('epic')=='true'){
+            Cookies.remove('epic')
+        }
 
     }
 
