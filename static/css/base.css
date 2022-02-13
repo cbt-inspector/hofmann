@@ -5,6 +5,7 @@
     --tertiary: #292929;
     --quartary: #0000ff;
     --quintary: #d7d7d7;
+    --fun     :#00b068;
     overflow-x: hidden;
     overflow-y: scroll;
   }
@@ -15,10 +16,17 @@
     --tertiary: #00b068;
     --quartary: #5369fc;
     --quintary: #13242a;
+    --fun     :#00b068;
+    
   }
 
   .hacker{
     --primary: #0d191d;
+    --secondary: #ffffff;
+    --tertiary: #ce10d4;
+    --quartary: #07e207;
+    --quintary: #1f2629;
+    --fun     :#ce10d4;
   }
   ::-webkit-scrollbar {
     width: 9px;

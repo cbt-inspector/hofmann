@@ -29,7 +29,7 @@
     position:relative;
     top:-82px;
     left:50px;
-    color:#00b068;
+    color:var(--fun);
   }
   div.cont {
     position:relative;

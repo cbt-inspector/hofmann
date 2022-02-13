@@ -98,7 +98,7 @@ function epicHacker(){
 
 
     //alert(hacker)
-    setTimeout(() => clearHacker(), 1000)
+    setTimeout(() => clearHacker(), 2000)
 
 
 }
