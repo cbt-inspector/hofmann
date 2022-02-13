@@ -1,0 +1,1 @@
+we are using https://github.com/js-cookie/js-cookie  for the cookies

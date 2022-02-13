@@ -12,7 +12,7 @@ Main script for the website of Joachim Hofmann
  -pease read the README.md for mor informations
 
 '''
-
+# Haupt seite
 @app.route("/")
 def home() :
     path = f"{os.getcwd()}/static/files/".replace("\\", "/")
@@ -29,7 +29,7 @@ def home() :
         fulllist.append(temp)
     return render_template("index.html", dircontents= fulllist)
 
-
+# Ordner unter seiten
 @app.route("/<link>/<file>")
 def folder(link, file) :
 
@@ -53,15 +53,15 @@ def folder(link, file) :
         for x in os.listdir(fullpath):
             dircont.append(x)
         return render_template("dir.html", path = pth , cont= f"{npath}/{file}", dircont= dircont, href= href)
-
+# Datenschutz seite
 @app.route("/datenschutz")
 def datenschutz():
     return render_template("datenschutz.html")
-
+# Über uns seite
 @app.route("/about")
 def about():
     return render_template("about.html")
-
+# Update funktions seite 
 @app.route("/update")
 def update():
     repo.remotes.origin.fetch()

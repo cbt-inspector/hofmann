@@ -12,8 +12,11 @@ Functions in files:
 - app.ini
     - Init file for an uwsgi server (with arguments)
 
-- styles.css
-    - CSS file for shared styles
+- css
+    - CSS files in the static/css folder 
+
+- javascript
+    - js files in the static/js folder 
 
 - templates folder:
 
@@ -68,5 +71,4 @@ $ pip install -r requirements.txt
 
 - Testing after this step is easy, just run this python script and open up http://127.0.0.1:5000 in your browser.
 
-https://github.com/js-cookie/js-cookie 
- -The Cookie lib
+
