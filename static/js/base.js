@@ -8,6 +8,7 @@ let cookies = false
 function darkmode() {
     epicHacker()
     
+    
     var element = document.body;
     element.classList.toggle("dark");
 
@@ -91,20 +92,21 @@ function onLoad(){
 function epicHacker(){
     hacker=hacker+1
     if (hacker>6){
-
+        
         hacker=0
 
         var element = document.body;
         element.classList.toggle("hacker");
-        alert("Hacker Mode activated!")
         Cookies.set('epic','true')
         //activates Hacker Mode
-        if(Cookies.get('epic')=='true'){
-            Cookies.remove('epic')
-        }
+        
 
     }
-
+    if (hacker>3){
+    
+         Cookies.remove('epic')
+    
+    }
 
     //alert(hacker)
     setTimeout(() => clearHacker(), 2000)
