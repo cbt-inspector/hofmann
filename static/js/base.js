@@ -53,8 +53,10 @@ function recoverDark() {
         document.getElementById("darkbutton").innerHTML = "<img src=\"/static/assets/light.png\" class=\"darkswitchpic\">"
 
         dark = true
-    }
-    else {
+    } else if (Cookies.get('darkmode')==="2"){
+        var element = document.body;
+        element.classList.toggle("hacker");
+    } else {
         dark = false
 
     }
@@ -93,6 +95,7 @@ function epicHacker(){
         var element = document.body;
         element.classList.toggle("hacker");
         alert("Hacker Mode activated!")
+        Cookies.set('darkmode','2')
         //activates Hacker Mode
 
     }
