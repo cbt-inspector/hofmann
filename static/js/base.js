@@ -1,7 +1,9 @@
 
 
 var dark
+var hacker = 0
 let cookies = false
+
 
 function darkmode() {
 
@@ -29,7 +31,7 @@ function darkmode() {
 
     }
 
-    //window.location.reload()
+    
 
 }
 
@@ -82,4 +84,16 @@ function onLoad(){
     if(!cookies){
         togglePopup()
     }
+}
+function epicHacker(){
+    
+    setTimeout(clearHacker(), 1500)
+    if (hacker>69){
+        //activates Hacker Mode
+    }
+    
+
+}
+function clearHacker(){
+
 }
