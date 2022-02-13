@@ -31,8 +31,6 @@ function darkmode() {
 
     }
 
-    
-
 }
 
 function recoverDark() {
@@ -86,15 +84,21 @@ function onLoad(){
     }
 }
 function epicHacker(){
-    hacker = hacker+1
-    //setTimeout(clearHacker(), 2000)
+    hacker=hacker+1
     if (hacker>6){
+
+        hacker=0
+        alert("Hacker Mode activated!")
         //activates Hacker Mode
         
     }
+
+
+    //alert(hacker)
+    setTimeout(() => clearHacker(), 1000)
     
 
 }
 function clearHacker(){
-    hacker=0
+    hacker=hacker-1
 }
