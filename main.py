@@ -10,7 +10,7 @@ filespath="static/files/"#relative paths start with the folder name, absolute pa
 
 '''
 Main script for the website of Joachim Hofmann
- -pease read the README.md for mor informations
+ -please read the README.md for mor informations
 
 '''
 # Haupt seite
