@@ -11,8 +11,8 @@
     <div class="crt">
       <p>> err_{{errcode}}:</p>
       <p>> {{description}}</p>
-      <p>> Would you like to go <a href="/" class="y">back home? [Y</a>/n]</p>
-      <p>> <span class="u">_</span></p>
+      <p>> Would you like to go <a href="/" class="y">back home?</a> [<a href="/" class="y">Y</a>/n]</p>
+      <p id="cursor">> <span class="u">_</span></p>
     </div>
     <script>
     document.addEventListener('keydown', function(event) {
@@ -20,6 +20,7 @@
         location.href = "/";
       }
       else if(event.keyCode == 89) {
+        document.getElementById('cursor').innerHTML = '> y';
         location.href = "/";
       }
     });
