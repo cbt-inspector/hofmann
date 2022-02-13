@@ -65,7 +65,7 @@ def datenschutz():
 # Über uns seite
 @app.route("/about")
 def about():
-    return render_template("hacker.html")
+    return render_template("about.html")
 # Update funktions seite
 @app.route("/update")
 def update():
