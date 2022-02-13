@@ -5,7 +5,7 @@
     --tertiary: #292929;
     --quartary: #0000ff;
     --quintary: #d7d7d7;
-
+    overflow-x: hidden;
     overflow-y: scroll;
   }
 
@@ -173,14 +173,20 @@
     height: 70px;
     cursor: pointer;
   }
-
+    #popup {
+      position: absolute;
+      transition-duration: 1s;
+    }
+    .show {
+      right: 220px;
+    }
+    .notshow {
+      right: -100px;
+    }
   /* Popup container - can be anything you want */
     .popup {
-    position: fixed;
+    position: absolute;
     bottom: 20%;
-    right: 220px;
-    display: inline-block;
-    transition-duration: 1s;
     }
 
     .popup h1 {
@@ -246,9 +252,6 @@
     }
 
     /* Toggle this class - hide and show the popup */
-    .popup .show {
-        right: 230px;
-    }
 
     /* Add animation (fade in the popup) */
 
