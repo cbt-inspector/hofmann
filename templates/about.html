@@ -3,9 +3,19 @@
 {% block style %}
 <style>
 
+td {
+  width: 200px;
+  text-align: center;
+}
+
+td img {
+  width: 170px;
+}
+
+
 #content {
     position: relative;
-    left:60px;
+    left:30px;
     bottom: 80px;
 }
 
@@ -13,26 +23,10 @@
     color: #00b068;
 }
 
-#aboutIcon {
-    position: relative;
-    left: 20px;
-    top: -5px;
-}
 
-#content .creators{
-    position:relative;
-    left:60px;
-
-}
-
-#content .creators .creator {
-    position: relative;
-    left:20px;
-    text-decoration: none;
-    color:#00b068
-}
 
   #navicon {
+    margin-top: 20px;
     height:40px;
     transition-duration: 0.4s;
     border-radius:50%;
@@ -43,7 +37,7 @@
   #navicon:hover {
     background-color: #00b068;
   }
-  
+
 </style>
 {% endblock %}
 {% block body %}
@@ -51,19 +45,40 @@
     <a href="/"><img src="/static/assets/back_house.png" class="homeicon" id="navicon"></a>
 
 <div id="content">
-        <h1>Über uns</h1>
+        <h1 style="padding-left:40px;padding-top:-14px;">Über uns</h1>
 
 <div class="creators">
     <h2>Creators</h2>
     <br>
-    <img id="aboutIcon" src="/static/assets/github.svg" height="50" width="50">
-    <br>
-    <a class=creator href="https://github.com/moehreag">moehreag</a>
-    <br>
-    <a class=creator href="https://github.com/schlingelTV">SchlingelTV</a>
-    <br>
-    <a class=creator href="https://github.com/sussy-balls-impostor">Sussy-Balls-Impostor</a>
+    <table>
+      <tr>
+        <th>
+          <img id="aboutIcon" src="/static/assets/github.svg" height="150" width="150" style="margin-right:30px">
+        </th>
+        <td>
+          <a href="https://github.com/cbt-inspector">
+            cbt-inspector
+            <br>
+            <img src="https://avatars.githubusercontent.com/u/91567654?v=4">
+          </a>
+        </td>
+        <td>
+          <a href="https://github.com/moehreag">
+            moehreag
+            <br>
+            <img src="https://avatars.githubusercontent.com/u/85403855?v=4">
+          </a>
+        </td>
+        <td>
+          <a href="https://github.com/schlingelTV">
+            Schlingel_TV
+            <br>
+            <img src="https://avatars.githubusercontent.com/u/83114842?v=4">
+          </a>
 
+        </td>
+      </tr>
+    </table>
 </div>
 </div>
 
