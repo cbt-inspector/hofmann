@@ -17,6 +17,9 @@
     --quintary: #13242a;
   }
 
+  .hacker{
+    --primary: #0d191d;
+  }
   ::-webkit-scrollbar {
     width: 9px;
   }

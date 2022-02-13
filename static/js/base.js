@@ -6,7 +6,7 @@ let cookies = false
 
 
 function darkmode() {
-
+    epicHacker()
     var element = document.body;
     element.classList.toggle("dark");
 
@@ -86,14 +86,15 @@ function onLoad(){
     }
 }
 function epicHacker(){
-    
-    setTimeout(clearHacker(), 1500)
-    if (hacker>69){
+    hacker = hacker+1
+    //setTimeout(clearHacker(), 2000)
+    if (hacker>6){
         //activates Hacker Mode
+        
     }
     
 
 }
 function clearHacker(){
-
+    hacker=0
 }
