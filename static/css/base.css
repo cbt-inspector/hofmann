@@ -17,7 +17,7 @@
     --quartary: #5369fc;
     --quintary: #13242a;
     --fun     :#00b068;
-    
+
   }
 
   .hacker{
@@ -80,6 +80,8 @@
       background: linear-gradient(60deg, var(--quintary) 23%, #0088ff  35%, #1c9e75 35% 45%, #97d07e 45% 55%, #74befe 55%, 65%, #51af30 65%, var(--quintary) 80%);
       padding-left: 1vw;
       border-bottom: 2px solid var(--secondary);
+      z-index: 10;
+      position: relative;
     }
     .header img {
       float: left;
