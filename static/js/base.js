@@ -89,9 +89,10 @@ function epicHacker(){
     if (hacker>6){
 
         hacker=0
-        alert("Hacker Mode activated!")
+
         var element = document.body;
         element.classList.toggle("hacker");
+        alert("Hacker Mode activated!")
         //activates Hacker Mode
 
     }

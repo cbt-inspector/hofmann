@@ -22,7 +22,7 @@
   }
 
   #navicon:hover {
-    background-color: #00b068;
+    background-color: var(--fun);
   }
 
   #location {
