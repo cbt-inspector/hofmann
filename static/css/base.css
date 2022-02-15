@@ -183,6 +183,7 @@
     #popup {
       position: fixed;
       transition-duration: 1s;
+      z-index:999;
     }
     .show {
       right: 220px;
